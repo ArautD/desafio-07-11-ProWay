@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "produtos.h"
 
 #define NOME_LOJA_MAXIMO 100
 
 void limparTela(){
     system("cls");
 }
+
 void nomeLoja(char* nome){
     limparTela();
     printf("Um novo dia no curso C/Cpp...\n");
@@ -31,21 +33,25 @@ void menuPrincipal(int opcaoSelecionada, const char* nomeLoja){
     switch (opcaoSelecionada){
         
         case 1:
-            limparTela();
-            printf("Opcao 1  - Cadastro de produto\n");
+            printf("Opcao 1 selecionada - Cadastro de produto\n");
+            cadastrarProduto();
             break;
         case 2:
             printf("Opcao 2 selecionada - Listar Produtos\n");
+            listarProdutos();
             break;
         case 3:
             printf("Opcao 3 selecionada - Buscar produto por nome\n");
+            buscarProduto();
             break;
         case 4:
             printf("Opcao 4 selecionada - Mostrar preco mais caro e mais barato\n");
+            mostrarPrecoBaratoCaro();
             break;
         case 5:
             printf("Opcao 5 selecionada - Mostrar media dos precos dos produtos\n");
             break;
+            mostrarMedia();
         case 0:
             printf("Saindo do sistema...\n");
             break;
