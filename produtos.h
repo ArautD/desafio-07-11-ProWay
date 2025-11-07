@@ -12,6 +12,7 @@ extern struct Produto produtos[MAX_PRODUTOS];
 extern int totalProdutos;
 
 // Declaração de funções
+void limparTela();
 void cadastrarProduto();
 void listarProdutos();
 void buscarProduto();

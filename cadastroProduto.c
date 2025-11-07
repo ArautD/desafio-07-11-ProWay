@@ -21,11 +21,3 @@ void cadastrarProduto() {
     printf("Produto %s cadastrado com sucesso!\n", produtos[totalProdutos].nome);
     totalProdutos++;
 }
-
-void listarProdutos() {
-    system("cls");
-    printf("Lista de Produtos:\n");
-    for(int i = 0; i < totalProdutos; i++) {
-        printf("%d. %s - R$ %.2f\n", i+1, produtos[i].nome, produtos[i].preco);
-    }
-}

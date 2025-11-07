@@ -3,7 +3,7 @@
 #include "produtos.h"
 
 void listarProdutos() {
-    system("cls");
+    limparTela();
     printf("Listando todos os produtos cadastrados:\n");
     printf("--------------------------------------\n");
     
