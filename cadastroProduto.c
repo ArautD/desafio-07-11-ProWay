@@ -1,9 +1,20 @@
 #include "produto.h"
 
-Produto produtos[MAX_PRODUTOS];
-int totalProdutos = 0;
+void cadastrarProduto() {
+    if (totalProdutos >= MAX_PRODUTOS) {
+        printf("NPC: Ops! Limite de produtos atingido!\n");
+        return;
+    }
 
-void toLowerStr(char *str) {
-    for (int i = 0; str[i]; i++)
-        str[i] = (char)tolower((unsigned char)str[i]);
+    printf("Digite o nome do produto: ");
+    fgets(produtos[totalProdutos].nome, MAX_NOME, stdin);
+    produtos[totalProdutos].nome[strcspn(produtos[totalProdutos].nome, "\n")] = '\0';
+
+    char buffer[32];
+    printf("Digite o preço do produto: ");
+    fgets(buffer, sizeof(buffer), stdin);
+    produtos[totalProdutos].preco = atof(buffer);
+
+    totalProdutos++;
+    printf("NPC: OBA! Seu produto foi cadastrado com sucesso!\n");
 }
